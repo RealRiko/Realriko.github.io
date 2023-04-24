@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="script.js" />
+    <script>
+      function myFunction(element) {
+        element.classList.toggle("change");
+        var menu = document.getElementById("verticalMenu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <nav>
+        <ul id="verticalMenu" class="vertical-menu">
+          <li><a href="#about">About me</a></li>
+          <li><a href="#projects">My projects</a></li>
+          <li><a href="#contact">Contact me</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <img src="logo.png" alt="logo" />
+      </div>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Sveiki! Mani sauc Enriko Čamans un man ir 17 gadi. Esmu no Siguldas un
+          Mācos VTDT (Vidzemes tehnoloģiju un dizaina tehnikumā).
+        </p>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Project To DO List</h3>
+          <p>HTML forma, kurā var ievadīt uzdevumu, kuru var arī izdzēst.</p>
+        </div>
+        <div class="project">
+          <h3>Project Laika prognoze</h3>
+          <p>
+            PHP forma, kurā ievada koordinātes, laiku un izvada laika prognozes.
+          </p>
+        </div>
+        <div class="project">
+          <h3>Project Uzmini skaitli</h3>
+          <p>PHP kods, kurā jauzmin random skaitlis no 1-100.</p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/mrgvroqg" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <input type="submit" value="Send" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Enriko Čamans. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
